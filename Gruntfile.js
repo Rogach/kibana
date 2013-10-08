@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       dist:{
         expand: true,
         cwd:'<%= srcDir %>/vendor/bootstrap/less/',
-        src: ['bootstrap.dark.less', 'bootstrap.light.less'],
+        src: ['bootstrap.dark.less', 'bootstrap.dark-flat.less', 'bootstrap.light.less'],
         dest: '<%= tempDir %>/css/',
       },
       // Compile in place when not building
@@ -36,6 +36,7 @@ module.exports = function (grunt) {
         },
         files: {
           "<%= srcDir %>/css/bootstrap.dark.min.css": "<%= srcDir %>/vendor/bootstrap/less/bootstrap.dark.less",
+          "<%= srcDir %>/css/bootstrap.dark-flat.min.css": "<%= srcDir %>/vendor/bootstrap/less/bootstrap.dark-flat.less",
           "<%= srcDir %>/css/bootstrap.light.min.css": "<%= srcDir %>/vendor/bootstrap/less/bootstrap.light.less"
         }
       }

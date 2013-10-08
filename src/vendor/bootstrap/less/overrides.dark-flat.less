@@ -1,0 +1,237 @@
+#events {
+  font-size: 12px;
+}
+
+.version {
+  font-size: 85%;
+}
+
+.legend {
+  color: @black;
+}
+
+.editor-title {
+  margin-right: 10px;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-transform:capitalize;
+}
+
+.editor-title small {
+  opacity: 0.5;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+.bordered {
+  border: 1px solid @tableBorder;
+}
+
+.spy {
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+
+.navbar-inner {
+  border-width: 0 0 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.kibana-row {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.row-button {
+  padding: 2px 7px 0px 7px;
+  float: left;
+}
+
+.row-close {
+  color: #bbb;
+  margin-left: -35px;
+  font-size: 9pt;
+  font-weight: 200;
+  padding-left: 35px;
+  padding-top: 0px;
+}
+
+.row-open {
+  text-align: right;
+  color: #bbb;
+  left:-30px;
+  position: absolute;
+  font-size: 13pt;
+  font-weight: 200;
+}
+
+.row-open i {
+  font-size: 10pt;
+}
+
+.odd {
+  background-color: @tableBackgroundAccent;
+}
+
+.nomargin {
+  margin: 0px;
+}
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.table tbody + tbody {
+  border-top: 0px;
+}
+
+.panel-error {
+  opacity: 0.9;
+  position:absolute;
+  z-index: 1000;
+}
+
+.panel-loading {
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 800;
+}
+
+.row-button.extra {
+  display: none;
+}
+.panel:hover .row-button.extra {
+  display: block;
+  float: right;
+  opacity: 0.7;
+  height: 7px;
+}
+
+/* Hide notice about full row */
+.row-open .icon-trello {
+  display: none;
+}
+
+.panel .panel-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 17.5px;
+  font-weight: 700;
+  line-height: 21px;
+  text-rendering: optimizelegibility;
+}
+
+.ui-draggable-dragging {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.dragInProgress {
+  background-color: darken(@bodyBackground,1%);
+  border: 1px solid @tableBorder;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  color: @linkColorHover;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.link:hover {
+  color: @linkColorHover;
+}
+
+.popover {
+  max-width: 480px;
+}
+
+.modal {
+  width: 770px;
+  margin-left: -385px;
+  top: 10px !important;
+}
+
+.tiny {
+  font-size: 50%;
+}
+
+.smaller {
+  font-size: 70%;
+}
+
+.small {
+  font-size: 85%;
+}
+
+.large {
+  font-size: 120%;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.input-append label {
+  font-size: inherit !important;
+}
+
+.input-smaller {
+  width: 75px;
+}
+
+.string {color:lighten(@textColor, 5%)}
+.number {color:lighten(@infoText, 5%)}
+.boolean {color:lighten(@warningText, 5%)}
+.key {color:lighten(@errorText, 5%)}
+
+.typeahead { z-index: 1051; }
+
+.btn-active {
+  background-color: #E6E6E6;
+  background-image: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  outline: 0 none
+}
+
+.remove:hover {
+  background-color: @btnDangerBackgroundHighlight;
+}
+
+.faded {
+  opacity: 0.2;
+}
+
+div.flot-text {
+  color: @textColor !important;
+}
+
+.dashboard-notice {
+  z-index:8000;
+  margin-left:0px;
+  padding:3px 0px 3px 0px;
+  width:100%;
+  color: @textColor;
+  padding-left:20px;
+}
