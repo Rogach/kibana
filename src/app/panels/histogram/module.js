@@ -443,7 +443,13 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
             }
 
             for (var i = 0; i < scope.data.length; i++) {
-              scope.data[i].data = scope.data[i].time_series.getFlotPairs(required_times);
+              var series = scope.data[i].time_series.getFlotPairs(required_times);
+              if (!scope.panel.lines) {
+                // remove zero values, if we are not doing line plot
+                /*jshint -W083 */
+                series = _(series).filter(function(v){ return v[1] > 0; });
+              }
+              scope.data[i].data = series;
             }
 
             scope.plot = $.plot(elem, scope.data, options);
