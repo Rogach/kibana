@@ -145,9 +145,9 @@ function (angular, app, _, $) {
         });
 
         function render_panel() {
-          elem.text('');
-          $('.jvectormap-zoomin,.jvectormap-zoomout,.jvectormap-label').remove();
           require(['./panels/map/lib/map.'+scope.panel.map], function () {
+            elem.empty();
+            $('.jvectormap-zoomin,.jvectormap-zoomout,.jvectormap-label').remove();
             elem.vectorMap({
               map: scope.panel.map,
               regionStyle: {initial: {fill: '#8c8c8c'}},
