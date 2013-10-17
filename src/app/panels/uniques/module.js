@@ -72,7 +72,7 @@ define([
 
     };
 
-    $scope.get_data = function(segment) {
+    $scope.get_data = function() {
       delete $scope.panel.error;
       $scope.panelMeta.loading = true;
 
@@ -81,12 +81,10 @@ define([
         return;
       }
 
-      var _segment = _.isUndefined(segment) ? 0 : segment;
-
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
       var resultSets = _.map($scope.panel.queries.ids, function(queryId, i) {
         var request = $scope.ejs.Request()
-          .indices(dashboard.indices[_segment])
+          .indices(dashboard.indices)
           .query(
             $scope.ejs.FilteredQuery(
               $scope.ejs.BoolQuery().should(querySrv.getEjsObj(queryId)),
